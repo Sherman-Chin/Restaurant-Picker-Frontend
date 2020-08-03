@@ -1,10 +1,10 @@
 import React from "react";
-
-function Card() {
+function Card(props) {
     return (
         <div>
-            <h2>Card sample</h2>
-            {/* Autocomplete text input */}
+            <h2>Hello</h2>
         </div>
     );
 };
+
+export default Card;

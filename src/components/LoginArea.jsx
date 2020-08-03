@@ -9,3 +9,5 @@ function LoginArea() {
         </div>
     );
 };
+
+export default LoginArea;
