@@ -4,10 +4,15 @@ import Select from "react-select";
 
 function Card(props) {
     const [data, setData] = useState([]);
+    const [selected, setSelected] = useState([]);
     var newData = [];
     async function getData() {
         const response = await axios.get("http://localhost:5000/" + props.listName, {crossdomain: true});
         return response.data;
+    }
+
+    function dataSelected(Object) {
+        setSelected([...selected, Object]);
     }
 
     if (data === undefined || data.length === 0) {
@@ -36,7 +41,10 @@ function Card(props) {
 
 
     return (
-        <Select options={newData} />
+        <div className="card">
+            <p className="cardText">{props.listName}</p>
+            <Select options={newData} isMulti onChange={dataSelected}/>
+        </div>
         );
 };
 

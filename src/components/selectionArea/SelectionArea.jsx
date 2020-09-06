@@ -4,7 +4,7 @@ import Card from "./Card";
 
 function SelectionArea() {
     return (
-        <div>
+        <div style={{textAlign: "center"}}>
             <Card listName="cuisines" />
             <Card listName= "establishments" />
             <Card listName="categories" /> 
