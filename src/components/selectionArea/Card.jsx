@@ -4,7 +4,6 @@ import Select from "react-select";
 
 function Card(props) {
     const [data, setData] = useState([]);
-    const [selected, setSelected] = useState([]);
     var newData = [];
     async function getData() {
         const response = await axios.get("http://localhost:5000/" + props.listName, {crossdomain: true});
@@ -12,7 +11,7 @@ function Card(props) {
     }
 
     function dataSelected(Object) {
-        setSelected([...selected, Object]);
+        props.handleChange(Object);
     }
 
     if (data === undefined || data.length === 0) {
