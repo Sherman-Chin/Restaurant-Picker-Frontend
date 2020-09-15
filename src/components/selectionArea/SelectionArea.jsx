@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import Card from "./Card";
 import RandomCard from "../RandomCard";
-// import axios from "axios";
 
 function SelectionArea() {
     const [cuisines, setCuisines] = useState([]);

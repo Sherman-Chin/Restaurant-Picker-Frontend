@@ -1,24 +1,25 @@
 import React from "react";
 
+//Add href to all "a" tags
 function Header() {
     return (<nav className="navbar navbar-expand-lg navbar-light bg-light">
-    <a className="navbar-brand" href="">Restaurant App</a>
+    <a className="navbar-brand" href="#bleh">Restaurant App</a>
     <button className="navbar-toggler" type="button" dataToggle="collapse" dataTarget="#menuBar" ariaControls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="menuBar">
       <ul className="navbar-nav ml-auto">
         <li className="nav-item active">
-          <a className="nav-link" href="">Home</a>
+          <a className="nav-link" href="#bleh">Home</a>
         </li>
         <li className="nav-item active">
-          <a className="nav-link" href="">Restaurant</a>
+          <a className="nav-link" href="#bleh">Restaurant</a>
         </li>
         <li className="nav-item active">
-          <a className="nav-link" href="">History</a>
+          <a className="nav-link" href="#bleh">History</a>
         </li>
         <li className="nav-item active">
-          <a className="nav-link" href="">Report</a>
+          <a className="nav-link" href="#bleh">Report</a>
         </li>
       </ul>
       </div>

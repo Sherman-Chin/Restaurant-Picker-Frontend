@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Select from "react-select";
 
+//Try removing crossdomain
 function Card(props) {
     const [data, setData] = useState([]);
     var newData = [];
