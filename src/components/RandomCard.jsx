@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
 function RandomCard(props) {
+    const [restaurants, setRestaurants] = useState([]);
     const data = {
         "cuisine": props.cuisine,
         "establishment": props.establishment,
@@ -11,11 +12,13 @@ function RandomCard(props) {
     function generateRestaurant() {
         axios.post("http://localhost:5000/", data)
             .then(res => {
-                console.log(res);
-                console.log(res.data);
+                setRestaurants(res.data);
+            }).catch(err => {
+                console.log(err);
             });
     }
 
+    console.log(restaurants);
 
     return (
         <div className="card" style={{ width: "18rem" }}>
